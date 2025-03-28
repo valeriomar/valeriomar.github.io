@@ -6,189 +6,147 @@
     <title>Valerio Marcelli | Diseñador Web</title>
     <style>
         :root {
-            --primary: #2563eb; /* Azul eléctrico */
-            --secondary: #7c3aed; /* Violeta vibrante */
-            --accent: #f59e0b; /* Ámbar cálido */
-            --dark: #1e293b; /* Azul noche */
-            --light: #f8fafc; /* Blanco suave */
-            --text: #334155; /* Gris oscuro */
-            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --bg: #f8f8f8;
+            --text: #333;
+            --line: #222;
+            --accent: #555;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
         }
         
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
         body {
-            background-color: var(--light);
+            background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
         
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 4rem 1rem;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            margin-bottom: -3rem;
-        }
-        
-        .container {
-            width: 95%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--line);
         }
         
         h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 300;
             letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
         }
         
         .tagline {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--accent);
         }
         
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            padding: 1rem;
+            gap: 3rem;
+            margin: 3rem 0;
         }
         
         .portfolio-item {
+            position: relative;
+            border: 1px solid var(--line);
+            padding: 0;
             background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
         }
         
         .preview-container {
-            position: relative;
-            height: 300px;
+            height: 420px;
             overflow: hidden;
+            border-bottom: 1px solid var(--line);
         }
         
         .mobile-preview {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            object-position: top;
+            transition: transform 0.3s ease;
         }
         
         .portfolio-item:hover .mobile-preview {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
         
         .portfolio-info {
-            padding: 1.75rem;
-            background: white;
-            position: relative;
+            padding: 1.5rem;
         }
         
         .portfolio-info h3 {
-            margin-bottom: 0.75rem;
-            color: var(--dark);
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
         }
         
         .portfolio-info p {
             margin-bottom: 1.5rem;
-            color: var(--text);
-            opacity: 0.8;
+            font-weight: 300;
+            line-height: 1.5;
         }
         
         .portfolio-info a {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient);
-            color: white;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--line);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            font-weight: 300;
+            transition: all 0.2s;
         }
         
         .portfolio-info a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            background: var(--line);
+            color: white;
         }
         
         footer {
-            background: var(--dark);
-            color: white;
             text-align: center;
-            padding: 4rem 0;
             margin-top: 4rem;
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
+            padding-top: 2rem;
+            border-top: 1px solid var(--line);
+            font-weight: 300;
             color: var(--accent);
         }
         
+        .contact {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+        
         @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
             
-            h1 {
-                font-size: 2.25rem;
-            }
-            
-            header {
-                padding: 3rem 1rem;
-                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            .preview-container {
+                height: 380px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Valerio Marcelli</h1>
-            <p class="tagline">Diseño web innovador que combina estética impactante con funcionalidad impecable</p>
-        </div>
+        <h1>Valerio Marcelli</h1>
+        <p class="tagline">Diseñador web</p>
     </header>
     
-    <main class="container">
+    <main>
         <section class="portfolio-grid">
             <!-- Proyecto 1 -->
             <div class="portfolio-item">
@@ -205,7 +163,7 @@
             <!-- Proyecto 2 -->
             <div class="portfolio-item">
                 <div class="preview-container">
-                    <img src="media/sardiniainnovativeboatweek-it-480x800phone-8a80cd.jpg"  alt="Sardinia Innovative Boat Week" class="mobile-preview">
+                    <img src="media/sardiniainnovativeboatweek-it-480x800phone-8a80cd.jpg" alt="Sardinia Innovative Boat Week" class="mobile-preview">
                 </div>
                 <div class="portfolio-info">
                     <h3>Sardinia Boat Week</h3>
@@ -265,17 +223,10 @@
     </main>
     
     <footer>
-        <div class="container">
-            <h2 style="color: white; margin-bottom: 1rem;">Trabajemos juntos</h2>
-            <p style="max-width: 600px; margin: 0 auto; opacity: 0.9;">¿Listo para llevar tu presencia digital al siguiente nivel?</p>
-            <a href="mailto:info@valeriomarcelli.com" style="display: inline-block; margin: 1.5rem 0; color: var(--accent); font-weight: 600; font-size: 1.25rem;">info@valeriomarcelli.com</a>
-            <div class="social-links">
-                <a href="#" target="_blank">📱</a>
-                <a href="#" target="_blank">💼</a>
-                <a href="#" target="_blank">✉️</a>
-            </div>
-            <p style="margin-top: 3rem; opacity: 0.7;">© 2023 Valerio Marcelli. Todos los derechos reservados.</p>
+        <div class="contact">
+            valerio.marcelli@icloud.com
         </div>
+        <p>© 2025 Valerio Marcelli. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
