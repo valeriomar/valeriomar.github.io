@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valerio Marcelli | Diseñador Web</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #D9043D; /* Rojo vibrante */
             --secondary: #F25E86; /* Rosa suave */
             --bg: #F2ECE4; /* Fondo crema cálido */
-            --text: #1a1a1a;
+            --text: #5A4A42; /* Color texto principal (marrón suave) */
+            --text-light: #8B7D76; /* Color texto secundario */
             --border: 2px;
-            --radius: 20px;
+            --radius: 18px;
         }
         
         * {
@@ -24,8 +25,9 @@
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
             padding: 3rem;
         }
         
@@ -36,21 +38,21 @@
         }
         
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-family: 'Ultra', serif;
+            font-size: 3.2rem;
+            font-weight: 400;
             margin-bottom: 1rem;
             color: var(--primary);
             line-height: 1.1;
+            letter-spacing: 0.5px;
         }
         
         .tagline {
             font-size: 1.3rem;
-            font-weight: 500;
-            color: var(--text);
+            font-weight: 300;
+            color: var(--text-light);
             max-width: 700px;
             margin: 0 auto;
-            opacity: 0.9;
         }
         
         .portfolio-grid {
@@ -101,17 +103,20 @@
         }
         
         .portfolio-info h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Ultra', serif;
             font-size: 1.6rem;
-            font-weight: 800;
+            font-weight: 400;
             margin-bottom: 1rem;
-            color: var(--text);
+            color: var(--primary);
+            letter-spacing: 0.3px;
         }
         
         .portfolio-info p {
             margin-bottom: 1.8rem;
             font-size: 1.05rem;
+            font-weight: 300;
             line-height: 1.7;
+            color: var(--text);
         }
         
         .portfolio-info a {
@@ -119,10 +124,12 @@
             padding: 0.9rem 2rem;
             background-color: var(--primary);
             color: var(--bg);
-            font-weight: 500;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
             text-decoration: none;
             border-radius: calc(var(--radius) - 6px);
             transition: all 0.3s;
+            letter-spacing: 0.5px;
         }
         
         .portfolio-info a:hover {
@@ -139,15 +146,16 @@
         
         .contact {
             font-size: 1.3rem;
-            font-weight: 500;
+            font-weight: 400;
             color: var(--primary);
             margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
         }
         
         .copyright {
             font-size: 1rem;
-            color: var(--text);
-            opacity: 0.8;
+            color: var(--text-light);
+            font-weight: 300;
         }
         
         @media (max-width: 768px) {
@@ -156,7 +164,7 @@
             }
             
             h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             .portfolio-grid {
@@ -209,7 +217,7 @@
                 </div>
                 <div class="portfolio-info">
                     <h3>A Touch of Wax</h3>
-                    <p>E-commerce de belleza con experiencia de reservación de cita optimizada.</p>
+                    <p>E-commerce de belleza con experiencia de compra optimizada.</p>
                     <a href="http://www.atouchofwax.com" target="_blank">Ver proyecto</a>
                 </div>
             </div>
@@ -221,7 +229,7 @@
                 </div>
                 <div class="portfolio-info">
                     <h3>Edizioni Koine</h3>
-                    <p>Editorial con catálogo digital y sistema de pedidos.</p>
+                    <p>Editorial con catálogo digital y sistema de pedidos personalizado.</p>
                     <a href="http://www.edizionikoine.it" target="_blank">Ver proyecto</a>
                 </div>
             </div>
