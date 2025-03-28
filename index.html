@@ -77,23 +77,23 @@
             box-shadow: 0 10px 25px rgba(80, 220, 182, 0.15);
         }
         
-.preview-container {
-    height: 480px;
-    overflow: hidden;
-    border-bottom: var(--border) solid var(--primary);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .preview-container {
+            height: 480px;
+            overflow: hidden;
+            border-bottom: var(--border) solid var(--primary);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.mobile-preview {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
-    object-position: center; /* Centra la imagen */
-    transition: transform 0.5s ease;
-}
+        .mobile-preview {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+            object-position: center; /* Centra la imagen */
+            transition: transform 0.5s ease;
+        }
         
         .portfolio-item:hover .mobile-preview {
             transform: scale(1.03);
@@ -309,7 +309,9 @@
     </main>
     
     <footer>
-        <div class="contact">valerio.marcelli@icloud.com</div>
+        <div class="contact">
+            <a href="mailto:valerio.marcelli@icloud.com">valerio.marcelli@icloud.com</a>
+        </div>
         <p class="copyright">© 2025 Valerio Marcelli. Todos los derechos reservados.</p>
     </footer>
 </body>
